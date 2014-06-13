@@ -1,0 +1,11 @@
+<%= link_to "Change email/password", "/users/#{current_user.id}/edit" %>
+<%= link_to "New Task", new_task_path %>
+<h3>I want to...</h3>
+<% @tasks.each do |task| %>
+	<div>
+		<%= task.todo %>
+		-
+		<%= link_to "Edit", "/tasks/#{task.id}/edit" %>
+		<%= link_to "Delete", "/tasks/#{task.id}", method: :delete %>
+	</div>
+<% end %>

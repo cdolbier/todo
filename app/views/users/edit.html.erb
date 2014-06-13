@@ -1,0 +1,11 @@
+<div>Update Profile Information</div>
+<%= form_for(@user) do |form| %>
+	<div>
+		<%= form.label :email %>
+		<%= form.text_field :email %>
+		</br>
+		<%= form.label :password %>
+		<input id="user_password" name="user[password]" type="password">
+	</div>
+	<%= form.submit "Update" %>
+<% end %>

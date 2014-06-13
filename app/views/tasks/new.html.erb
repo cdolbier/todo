@@ -1,0 +1,7 @@
+<%= form_for(@task) do |form| %>
+	<div>
+		<label for="task_todo">I want to...</label>
+		<%= form.text_field :todo %>
+	</div>
+	<%= form.submit "Create task" %>
+<% end %>
